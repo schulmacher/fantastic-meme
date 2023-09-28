@@ -1,0 +1,15 @@
+Hello my file.
+Pwned.
+\n
+
+Love this error....
+src/examples/read_file.zig:27:39: error: expected type '*mem.Allocator', found '*const *const heap.FixedBufferAllocator'
+    const fileContents = try readFile(&allocator, &[_][]const u8{ ".", "read_rile.txt" });
+
+And this error..
+src/examples/read_file.zig:24:43: error: no field named 'allocator' in struct 'heap.FixedBufferAllocator'
+    var allocator = &fixedBufferAllocator.allocator;
+
+
+And....
+src/examples/read_file.zig:27:63: error: expected type '*mem.Allocator', found '*const mem.Allocator'
