@@ -49,3 +49,12 @@ test "if while syntax" {
         std.debug.print("{s}\n", .{item});
     }
 }
+
+test "array" {
+    const array = [3]i32{ 5, 6, 7 };
+    std.debug.print("\n", .{});
+
+    for (array, 0..) |item, i| {
+        std.debug.print("{d}: {d}\n", .{ i, item });
+    }
+}
